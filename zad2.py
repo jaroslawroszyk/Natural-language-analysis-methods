@@ -11,6 +11,8 @@ b) (*) wypróbuj iloczyn skalarny zamiast podobieństwa kosinusowego
 c) (*) wypróbuj różne sposoby wyliczania BoW (wektor lub liczba wystąpień), TF, IDF
 """
 
+# Todo: komy z klas/kodu wrzucic do collaba i opisac w jaki sposob to dziala!
+
 from sklearn.datasets import fetch_20newsgroups
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer, TfidfTransformer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -337,8 +339,17 @@ def run_all_experiments(query: str, top_k: int = 5):
 
 
 if __name__ == "__main__":
-    # Przykładowe zapytanie
-    query = "cars are vehicles with four wheels and bell"
+    # Uwaga: 20newsgroups to korpus z lat 90. o różnych tematach (religia, polityka, technologia, itp.)
+    # Zapytania powinny być związane z tymi tematami dla lepszych wyników
     
-    # Uruchom wszystkie eksperymenty
+    # query = "cars are vehicles with four wheels and bell"
+    
+    # query = "What is the capital of Poland?"
+    
+    query = "What do Christians believe about God?"
+    
+    # query = "baseball players and teams statistics"
+    
     run_all_experiments(query, top_k=5)
+
+
