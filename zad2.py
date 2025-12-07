@@ -86,7 +86,7 @@ for idx, sim in zip(indices_cosine, sim_cosine):
     print(newsgroups.data[idx][:500])
     print("-" * 80)
 
-# 5. Podpunkt b) - iloczyn skalarny
+# 5. Podpunkt b) - iloczyn skalarny`
 indices_dot, sim_dot = document_searcher(document, X, vectorizer, top_k, use_cosine=False)
 
 print("=== Top 5 dokumentów (iloczyn skalarny) ===")
